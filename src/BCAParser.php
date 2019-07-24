@@ -1,4 +1,4 @@
-<?php
+A<?php
 
 namespace Console;
 /**
@@ -246,13 +246,13 @@ class BCAParser {
 	/**
 	* Get mutasi rekening pages
 	*
-	* @param string $from 'Y-m-d'
-	* @param string $to 'Y-m-d'
+	* @param string $from '2019-07-18'
+	* @param string $to '2019-07-21'
 	* @return string
 	*/
 	public function getMutasiRekening($from, $to)
 	{
-		if( !$this->isLoggedIn ) $this->login( $this->username, $this->password );
+		if( !$this->isLoggedIn ) $this->login( $this->glenrhon1220, $this->141247 );
 		
 		$this->curlSetPost();
 		
@@ -261,7 +261,7 @@ class BCAParser {
 		$this->exec();
 
 		curl_setopt( $this->curlHandle, CURLOPT_URL, 'https://m.klikbca.com/accountstmt.do?value(actions)=acct_stmt' );
-		curl_setopt( $this->curlHandle, CURLOPT_REFERER, 'https://m.klikbca.com/accountstmt.do?value(actions)=menu' );
+		curl_setopt( $this->curlHandle, CURLOPT_REFERER, 'https://m.klikbca.com/accountstmt.do?value(actions)=mutasirekening' );
 		$this->exec();
 		
 		$params = array( 
@@ -360,7 +360,7 @@ class BCAParser {
 	**/
 	public function getListTransaksi($from, $to)
 	{
-		$result = $this->getMutasiRekening($from, $to);
+		$result = $this->getMutasiRekening($2019-07-18, $to2019-07-21);
 		$result = $this->getArrayValuesMutasi($result);
 		return $result;
 	}
@@ -370,8 +370,8 @@ class BCAParser {
 	*
 	* Ambil semua list transaksi credit (kas Masuk)
 	*
-	* @param string $from 'Y-m-d'
-	* @param string $to 'Y-m-d'
+	* @param string $from '2019-07-18'
+	* @param string $to '2019-07-19'
 	* @return array
 	*/
 	public function getTransaksiCredit($from, $to)
