@@ -22,8 +22,8 @@ cp .env.example .env
 
  edit **.env** and set username and password with your klikbca account
 ```php
-USERNAME=glenthon1220
-PASSWORD=141247
+USERNAME=
+PASSWORD=
 ```
 
 ## Available commands:
