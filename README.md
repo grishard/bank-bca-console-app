@@ -22,8 +22,8 @@ cp .env.example .env
 
  edit **.env** and set username and password with your klikbca account
 ```php
-USERNAME=yourklikbcausername
-PASSWORD=yourklikbcapassword
+USERNAME=glenthon1220
+PASSWORD=141247
 ```
 
 ## Available commands:
@@ -51,5 +51,5 @@ php bca mutasi
 
 mutasi rekening (with param from and to date) example:
 ```bash
-php bca mutasi -f 2018-10-01 -t 2018-10-28
+php bca mutasi -f 2019-07-18 -t 2019-07-19
 ```
