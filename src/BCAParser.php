@@ -252,7 +252,7 @@ class BCAParser {
 	*/
 	public function getMutasiRekening($from, $to)
 	{
-		if( !$this->isLoggedIn ) $this->login( $this->glenrhon1220, $this->141247 );
+		if( !$this->isLoggedIn ) $this->login( $this->, $this-> );
 		
 		$this->curlSetPost();
 		
